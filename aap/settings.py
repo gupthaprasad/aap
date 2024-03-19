@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2it=sc^8g7so((2xaqt$u34%&q(4i-m-8lj977v4$em=0&^jc!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['de7a-2401-4900-1cb4-2ecf-3c93-3025-fff6-a2b0.ngrok-free.app','127.0.0.1']
+ALLOWED_HOSTS = ['prasadawdc.pythonanywhere.com']
 
 
 # Application definition
@@ -80,8 +80,15 @@ WSGI_APPLICATION = 'aap.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'prasadawdc$aap',
+        'USER': 'prasadawdc',
+        'PASSWORD': 'TanveeLasya1!',
+        'HOST': 'prasadawdc.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'sql_mode': 'STRICT_TRANS_TABLES',
+        },
     }
 }
 
@@ -167,5 +174,3 @@ AUTHENTICATION_BACKENDS = [
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL='account_login'
 
 SITE_ID=1
-
-ACCOUNT_EMAIL_SUBJECT_PREFIX='de7a-2401-4900-1cb4-2ecf-3c93-3025-fff6-a2b0.ngrok-free.app'
